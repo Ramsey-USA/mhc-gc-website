@@ -1,0 +1,449 @@
+/* MH Construction - Responsive Design */
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-primary);
+        box-shadow: var(--shadow-xl);
+        transform: translateY(-100%);
+        transition: transform var(--transition-normal);
+        z-index: var(--z-fixed);
+    }
+    
+    .nav.active {
+        transform: translateY(0);
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        gap: 0;
+    }
+    
+    .nav-link {
+        padding: var(--spacing-md);
+        border-radius: 0;
+        border-bottom: 1px solid var(--bg-tertiary);
+    }
+    
+    .header-actions {
+        display: none;
+    }
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    /* Adjust grid layouts */
+    .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    /* Font size adjustments */
+    h1 { font-size: var(--font-size-4xl); }
+    h2 { font-size: var(--font-size-3xl); }
+    h3 { font-size: var(--font-size-2xl); }
+    
+    /* Modal adjustments */
+    .modal-content {
+        width: 95%;
+        margin: var(--spacing-md);
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    /* Typography scaling */
+    h1 { font-size: var(--font-size-3xl); }
+    h2 { font-size: var(--font-size-2xl); }
+    h3 { font-size: var(--font-size-xl); }
+    h4 { font-size: var(--font-size-lg); }
+    
+    /* Section padding */
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    /* Page hero adjustments */
+    .page-hero {
+        padding: calc(70px + var(--spacing-xl)) 0 var(--spacing-xl) 0;
+    }
+    
+    .page-hero p {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Grid layouts */
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Button adjustments */
+    .btn-large {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-base);
+    }
+    
+    /* Card adjustments */
+    .card {
+        padding: var(--spacing-lg);
+    }
+    
+    /* Flip card adjustments */
+    .flip-card {
+        height: 250px;
+    }
+    
+    .flip-card-front,
+    .flip-card-back {
+        padding: var(--spacing-lg);
+    }
+    
+    .flip-card-icon {
+        font-size: var(--font-size-4xl);
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    /* Modal adjustments */
+    .modal-content {
+        width: 95%;
+        margin: var(--spacing-sm);
+    }
+    
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: var(--spacing-md);
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    /* Carousel adjustments */
+    .carousel-controls {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-lg);
+    }
+    
+    .carousel-prev {
+        left: var(--spacing-sm);
+    }
+    
+    .carousel-next {
+        right: var(--spacing-sm);
+    }
+}
+
+/* Small Mobile Breakpoint */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Further typography scaling */
+    h1 { font-size: var(--font-size-2xl); }
+    h2 { font-size: var(--font-size-xl); }
+    h3 { font-size: var(--font-size-lg); }
+    
+    /* Section spacing */
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    /* Page hero */
+    .page-hero {
+        padding: calc(70px + var(--spacing-lg)) 0 var(--spacing-lg) 0;
+    }
+    
+    /* Button adjustments */
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+    
+    .btn-large {
+        padding: var(--spacing-md);
+        font-size: var(--font-size-base);
+    }
+    
+    /* Form adjustments */
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        padding: var(--spacing-sm);
+    }
+    
+    /* Card adjustments */
+    .card {
+        padding: var(--spacing-md);
+    }
+    
+    /* Flip card adjustments */
+    .flip-card {
+        height: 200px;
+    }
+    
+    .flip-card-front,
+    .flip-card-back {
+        padding: var(--spacing-md);
+    }
+    
+    .flip-card-icon {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* Toast adjustments */
+    .toast {
+        left: var(--spacing-sm);
+        right: var(--spacing-sm);
+        max-width: none;
+    }
+    
+    /* Modal adjustments */
+    .modal-content {
+        width: 98%;
+        margin: var(--spacing-xs);
+    }
+    
+    /* Social icons */
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Large Desktop Breakpoint */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    /* Scale up typography */
+    h1 { font-size: var(--font-size-6xl); }
+    
+    /* Increase section padding */
+    section {
+        padding: calc(var(--spacing-xxl) + var(--spacing-lg)) 0;
+    }
+    
+    /* Grid adjustments */
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ensure crisp images and icons */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+    
+    .header,
+    .footer,
+    .chatbot-container,
+    .modal,
+    .toast {
+        display: none !important;
+    }
+    
+    .btn {
+        border: 1px solid #000;
+        background: none !important;
+        color: #000 !important;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --bg-primary: #FFFFFF;
+        --bg-secondary: #F0F0F0;
+        --text-primary: #000000;
+        --text-secondary: #333333;
+        --mh-primary-green: #2E7D32;
+        --mh-secondary-tan: #8D6E63;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1A1A1A;
+        --bg-secondary: #2D2D2D;
+        --bg-tertiary: #404040;
+        --text-primary: #FFFFFF;
+        --text-secondary: #B0B0B0;
+        --text-muted: #808080;
+        --mh-primary-green: #4CAF50;
+        --mh-secondary-tan: #D4B896;
+    }
+    
+    .header {
+        background-color: rgba(26, 26, 26, 0.95);
+        border-bottom-color: var(--bg-tertiary);
+    }
+    
+    .modal-content {
+        background-color: var(--bg-secondary);
+    }
+    
+    .toast {
+        background-color: var(--bg-secondary);
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .btn {
+        min-height: 48px;
+        min-width: 48px;
+    }
+    
+    .nav-link {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Remove hover effects */
+    .btn:hover,
+    .card:hover,
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+    
+    /* Improve touch scrolling */
+    .modal-body,
+    .chatbot-messages {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Landscape Orientation on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .page-hero {
+        padding: calc(70px + var(--spacing-md)) 0 var(--spacing-md) 0;
+    }
+    
+    .flip-card {
+        height: 180px;
+    }
+    
+    section {
+        padding: var(--spacing-md) 0;
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    h1 { font-size: var(--font-size-xl); }
+    h2 { font-size: var(--font-size-lg); }
+    
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
+    }
+    
+    .flip-card {
+        height: 150px;
+    }
+    
+    .flip-card-icon {
+        font-size: var(--font-size-2xl);
+    }
+}

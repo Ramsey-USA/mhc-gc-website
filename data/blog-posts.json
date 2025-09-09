@@ -1,0 +1,72 @@
+[
+  {
+    "id": "future-construction-technology",
+    "title": "The Future of Construction Technology",
+    "excerpt": "How AI and 3D visualization are revolutionizing the building industry and improving project outcomes.",
+    "content": "The construction industry is experiencing a technological revolution that's transforming how we design, plan, and build. From AI-powered project estimation to immersive 3D visualization, these innovations are making construction more efficient, accurate, and transparent than ever before.",
+    "author": "Jane Smith",
+    "authorRole": "Lead Architect",
+    "publishDate": "2024-10-20",
+    "category": "Technology",
+    "tags": ["AI", "3D Visualization", "Innovation", "Construction Technology"],
+    "image": "images/blog/construction-technology.jpg",
+    "readTime": "5 min read",
+    "featured": true
+  },
+  {
+    "id": "summers-hub-completion",
+    "title": "Summer's Hub Project Completion",
+    "excerpt": "A detailed look behind the scenes of our latest community center project and the innovative approaches we used.",
+    "content": "The completion of Summer's Hub represents a milestone in modern community center design. This 12,000 square foot facility showcases sustainable building practices, innovative technology integration, and thoughtful design that serves the community's diverse needs.",
+    "author": "Mike Johnson",
+    "authorRole": "Construction Supervisor",
+    "publishDate": "2024-10-15",
+    "category": "Project Spotlight",
+    "tags": ["Community Center", "Sustainable Building", "Project Completion"],
+    "image": "images/blog/summers-hub-blog.jpg",
+    "readTime": "4 min read",
+    "featured": true
+  },
+  {
+    "id": "veteran-excellence",
+    "title": "Veteran-Owned Business Excellence",
+    "excerpt": "The military values that drive our construction excellence and commitment to quality in every project.",
+    "content": "Our military background isn't just part of our history—it's the foundation of our approach to construction. The discipline, attention to detail, and commitment to excellence learned in military service translates directly to superior construction outcomes.",
+    "author": "John Doe",
+    "authorRole": "Project Manager",
+    "publishDate": "2024-10-10",
+    "category": "Company Culture",
+    "tags": ["Veteran Owned", "Military Values", "Excellence", "Quality"],
+    "image": "images/blog/veteran-excellence.jpg",
+    "readTime": "3 min read",
+    "featured": true
+  },
+  {
+    "id": "sustainable-building-practices",
+    "title": "Sustainable Building Practices That Make a Difference",
+    "excerpt": "Our commitment to environmentally responsible construction methods and their impact on both cost and performance.",
+    "content": "Sustainable building isn't just good for the environment—it's smart business. Our approach to green construction reduces long-term operational costs while creating healthier spaces for occupants and reducing environmental impact.",
+    "author": "Sarah Williams",
+    "authorRole": "Estimator",
+    "publishDate": "2024-10-05",
+    "category": "Sustainability",
+    "tags": ["Green Building", "LEED", "Energy Efficiency", "Sustainable Construction"],
+    "image": "images/blog/sustainable-building.jpg",
+    "readTime": "6 min read",
+    "featured": false
+  },
+  {
+    "id": "safety-first-culture",
+    "title": "Building a Safety-First Culture on Every Jobsite",
+    "excerpt": "How our comprehensive safety programs protect workers and ensure project success from start to finish.",
+    "content": "Safety isn't just a priority—it's a core value that influences every decision we make. Our comprehensive safety programs, ongoing training, and proactive approach have resulted in an industry-leading safety record.",
+    "author": "Robert Davis",
+    "authorRole": "Safety Manager",
+    "publishDate": "2024-09-28",
+    "category": "Safety",
+    "tags": ["Safety", "Training", "OSHA", "Risk Management"],
+    "image": "images/blog/safety-culture.jpg",
+    "readTime": "4 min read",
+    "featured": false
+  }
+]

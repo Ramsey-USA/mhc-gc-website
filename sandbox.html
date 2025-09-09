@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Sandbox - Interactive Builder | MH Construction</title>
+    <meta name="description" content="Design your construction project with our interactive drag-and-drop builder. Real-time cost updates and 3D visualization.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sandbox.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Three.js for 3D Building -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-text">
+                            <span class="logo-mh">MH</span>
+                            <span class="logo-construction">Construction</span>
+                        </div>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="save-project">Save Project</button>
+                    <button class="btn btn-primary" id="get-quote">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sandbox Interface -->
+    <div class="sandbox-container">
+        <!-- Left Sidebar - Component Library -->
+        <div class="component-sidebar">
+            <div class="sidebar-header">
+                <h3>Building Components</h3>
+                <div class="search-components">
+                    <input type="text" placeholder="Search components..." id="component-search">
+                </div>
+            </div>
+            
+            <div class="component-categories">
+                <!-- Structural Components -->
+                <div class="component-category active" data-category="structural">
+                    <div class="category-header">
+                        <span class="category-icon">🏗️</span>
+                        <span class="category-name">Structural</span>
+                        <span class="category-toggle">▼</span>
+                    </div>
+                    <div class="component-list">
+                        <div class="component-item" data-component="wall" data-cost="50">
+                            <div class="component-preview">
+                                <div class="wall-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Wall</span>
+                                <span class="component-cost">$50/sq ft</span>
+                            </div>
+                        </div>
+                        <div class="component-item" data-component="beam" data-cost="75">
+                            <div class="component-preview">
+                                <div class="beam-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Support Beam</span>
+                                <span class="component-cost">$75/sq ft</span>
+                            </div>
+                        </div>
+                        <div class="component-item" data-component="column" data-cost="100">
+                            <div class="component-preview">
+                                <div class="column-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Column</span>
+                                <span class="component-cost">$100 each</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doors & Windows -->
+                <div class="component-category" data-category="openings">
+                    <div class="category-header">
+                        <span class="category-icon">🚪</span>
+                        <span class="category-name">Doors & Windows</span>
+                        <span class="category-toggle">▶</span>
+                    </div>
+                    <div class="component-list">
+                        <div class="component-item" data-component="door" data-cost="500">
+                            <div class="component-preview">
+                                <div class="door-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Standard Door</span>
+                                <span class="component-cost">$500 each</span>
+                            </div>
+                        </div>
+                        <div class="component-item" data-component="window" data-cost="300">
+                            <div class="component-preview">
+                                <div class="window-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Standard Window</span>
+                                <span class="component-cost">$300 each</span>
+                            </div>
+                        </div>
+                        <div class="component-item" data-component="sliding-door" data-cost="800">
+                            <div class="component-preview">
+                                <div class="sliding-door-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Sliding Door</span>
+                                <span class="component-cost">$800 each</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finishes -->
+                <div class="component-category" data-category="finishes">
+                    <div class="category-header">
+                        <span class="category-icon">🎨</span>
+                        <span class="category-name">Finishes</span>
+                        <span class="category-toggle">▶</span>
+                    </div>
+                    <div class="component-list">
+                        <div class="component-item" data-component="flooring" data-cost="25">
+                            <div class="component-preview">
+                                <div class="flooring-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Hardwood Flooring</span>
+                                <span class="component-cost">$25/sq ft</span>
+                            </div>
+                        </div>
+                        <div class="component-item" data-component="countertop" data-cost="60">
+                            <div class="component-preview">
+                                <div class="countertop-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Granite Countertop</span>
+                                <span class="component-cost">$60/sq ft</span>
+                            </div>
+                        </div>
+                        <div class="component-item" data-component="cabinet" data-cost="200">
+                            <div class="component-preview">
+                                <div class="cabinet-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Custom Cabinet</span>
+                                <span class="component-cost">$200/lin ft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fixtures -->
+                <div class="component-category" data-category="fixtures">
+                    <div class="category-header">
+                        <span class="category-icon">💡</span>
+                        <span class="category-name">Fixtures</span>
+                        <span class="category-toggle">▶</span>
+                    </div>
+                    <div class="component-list">
+                        <div class="component-item" data-component="lighting" data-cost="150">
+                            <div class="component-preview">
+                                <div class="lighting-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Chandelier</span>
+                                <span class="component-cost">$150 each</span>
+                            </div>
+                        </div>
+                        <div class="component-item" data-component="plumbing" data-cost="800">
+                            <div class="component-preview">
+                                <div class="plumbing-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Premium Faucet</span>
+                                <span class="component-cost">$800 each</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Furniture (Visualization Only) -->
+                <div class="component-category" data-category="furniture">
+                    <div class="category-header">
+                        <span class="category-icon">🛋️</span>
+                        <span class="category-name">Furniture (Preview)</span>
+                        <span class="category-toggle">▶</span>
+                    </div>
+                    <div class="component-list">
+                        <div class="component-item" data-component="sofa" data-cost="0">
+                            <div class="component-preview">
+                                <div class="sofa-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Sofa</span>
+                                <span class="component-cost">Visualization Only</span>
+                            </div>
+                        </div>
+                        <div class="component-item" data-component="table" data-cost="0">
+                            <div class="component-preview">
+                                <div class="table-preview"></div>
+                            </div>
+                            <div class="component-info">
+                                <span class="component-name">Dining Table</span>
+                                <span class="component-cost">Visualization Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Canvas Area -->
+        <div class="sandbox-main">
+            <div class="canvas-header">
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="2d">2D Plan</button>
+                    <button class="view-btn" data-view="3d">3D View</button>
+                    <button class="view-btn" data-view="walkthrough">Walkthrough</button>
+                </div>
+                
+                <div class="canvas-tools">
+                    <button class="tool-btn" id="select-tool" title="Select">📍</button>
+                    <button class="tool-btn" id="move-tool" title="Move">✋</button>
+                    <button class="tool-btn" id="rotate-tool" title="Rotate">🔄</button>
+                    <button class="tool-btn" id="delete-tool" title="Delete">🗑️</button>
+                    <button class="tool-btn" id="measure-tool" title="Measure">📏</button>
+                </div>
+                
+                <div class="canvas-actions">
+                    <button class="action-btn" id="undo-btn">Undo</button>
+                    <button class="action-btn" id="redo-btn">Redo</button>
+                    <button class="action-btn" id="clear-all">Clear All</button>
+                </div>
+            </div>
+
+            <!-- 2D Canvas -->
+            <div class="canvas-container" id="canvas-2d">
+                <canvas id="design-canvas" width="1200" height="800"></canvas>
+                <div class="canvas-grid"></div>
+                <div class="canvas-rulers">
+                    <div class="ruler ruler-horizontal"></div>
+                    <div class="ruler ruler-vertical"></div>
+                </div>
+            </div>
+
+            <!-- 3D Canvas -->
+            <div class="canvas-container" id="canvas-3d" style="display: none;">
+                <div id="three-canvas"></div>
+                <div class="camera-controls">
+                    <button class="camera-btn" id="front-view">Front</button>
+                    <button class="camera-btn" id="side-view">Side</button>
+                    <button class="camera-btn" id="top-view">Top</button>
+                    <button class="camera-btn" id="iso-view">Isometric</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar - Properties & Cost -->
+        <div class="properties-sidebar">
+            <!-- Selection Properties -->
+            <div class="properties-panel">
+                <div class="panel-header">
+                    <h3>Properties</h3>
+                </div>
+                <div class="panel-content" id="properties-content">
+                    <div class="no-selection">
+                        <p>Select an item to edit properties</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Cost Calculator -->
+            <div class="cost-panel">
+                <div class="panel-header">
+                    <h3>Project Cost</h3>
+                    <span class="cost-disclaimer">Materials Only</span>
+                </div>
+                <div class="panel-content">
+                    <div class="cost-breakdown">
+                        <div class="cost-category">
+                            <div class="cost-item">
+                                <span class="cost-label">Structural</span>
+                                <span class="cost-value" id="structural-cost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Doors & Windows</span>
+                                <span class="cost-value" id="openings-cost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Finishes</span>
+                                <span class="cost-value" id="finishes-cost">$0</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Fixtures</span>
+                                <span class="cost-value" id="fixtures-cost">$0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cost-total">
+                            <div class="total-line">
+                                <span class="total-label">Subtotal (Materials)</span>
+                                <span class="total-value" id="subtotal-cost">$0</span>
+                            </div>
+                            <div class="total-line main-total">
+                                <span class="total-label">Estimated Total*</span>
+                                <span class="total-value" id="total-cost">$0</span>
+                            </div>
+                            <p class="cost-note">*Includes estimated labor and overhead</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Actions -->
+            <div class="actions-panel">
+                <div class="panel-header">
+                    <h3>Actions</h3>
+                </div>
+                <div class="panel-content">
+                    <button class="action-btn-full" id="save-and-continue">
+                        Save & Get Quote
+                    </button>
+                    <button class="action-btn-full secondary" id="share-project">
+                        Share Project
+                    </button>
+                    <button class="action-btn-full secondary" id="export-plans">
+                        Export Plans
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progressive Lead Capture Modal -->
+    <div class="modal" id="lead-capture-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Save Your Project</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="lead-step" id="lead-step-1">
+                    <p>Save your project design and get a detailed quote from our experts.</p>
+                    <form class="lead-form" id="basic-info-form">
+                        <div class="input-group">
+                            <label for="project-name">Project Name</label>
+                            <input type="text" id="project-name" placeholder="My Dream Project" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="lead-email">Email Address</label>
+                            <input type="email" id="lead-email" placeholder="your@email.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Continue</button>
+                    </form>
+                </div>
+                
+                <div class="lead-step" id="lead-step-2" style="display: none;">
+                    <p>Help us provide you with the most accurate quote.</p>
+                    <form class="lead-form" id="detailed-info-form">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="lead-first-name">First Name</label>
+                                <input type="text" id="lead-first-name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="lead-last-name">Last Name</label>
+                                <input type="text" id="lead-last-name" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="lead-phone">Phone Number</label>
+                            <input type="tel" id="lead-phone" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="project-timeline">When do you want to start?</label>
+                            <select id="project-timeline" required>
+                                <option value="">Select timeline</option>
+                                <option value="asap">ASAP (1-3 months)</option>
+                                <option value="3-6months">3-6 months</option>
+                                <option value="6-12months">6-12 months</option>
+                                <option value="over-12months">Over 12 months</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="project-budget">Estimated Budget Range</label>
+                            <select id="project-budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-50k">Under $50,000</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="100k-250k">$100,000 - $250,000</option>
+                                <option value="250k-500k">$250,000 - $500,000</option>
+                                <option value="over-500k">Over $500,000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Get My Quote</button>
+                    </form>
+                </div>
+                
+                <div class="lead-step" id="lead-step-3" style="display: none;">
+                    <div class="success-message">
+                        <div class="success-icon">✓</div>
+                        <h4>Project Saved Successfully!</h4>
+                        <p>We'll review your design and send you a detailed quote within 24 hours.</p>
+                        <div class="next-actions">
+                            <a href="project-viewer.html" class="btn btn-primary">Explore 3D Projects</a>
+                            <button class="btn btn-secondary" id="continue-designing">Continue Designing</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Processing your design...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/three-setup.js"></script>
+    <script src="js/sandbox.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>

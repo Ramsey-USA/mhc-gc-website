@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact MH Construction - Schedule Your Consultation</title>
+    <meta name="description" content="Contact MH Construction for your next project. 24-hour response guarantee. Serving WA, OR & ID. Call (509) 308-6489 or schedule online.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/mh-logo.png" alt="MH Construction" class="logo-img">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Contact MH Construction</h1>
+                <p>Ready to start your project? Get in touch with our expert team.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>24 Hours</strong>
+                        <span>Response Guarantee</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>Free</strong>
+                        <span>Initial Consultation</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>3 States</strong>
+                        <span>Service Coverage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="methods-grid">
+                <div class="method-card phone">
+                    <div class="method-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p class="method-primary">(509) 308-6489</p>
+                    <p>Monday - Friday: 7:00 AM - 6:00 PM PST</p>
+                    <p>Emergency: 24/7 availability</p>
+                    <a href="tel:5093086489" class="btn btn-primary">Call Now</a>
+                </div>
+                
+                <div class="method-card email">
+                    <div class="method-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p class="method-primary">info@mhc-gc.com</p>
+                    <p>24-hour response guarantee</p>
+                    <p>Detailed project discussions</p>
+                    <a href="mailto:info@mhc-gc.com" class="btn btn-secondary">Send Email</a>
+                </div>
+                
+                <div class="method-card visit">
+                    <div class="method-icon">📍</div>
+                    <h3>Visit Our Office</h3>
+                    <p class="method-primary">Pasco, Washington</p>
+                    <p>By appointment only</p>
+                    <p>Project planning & consultations</p>
+                    <button class="btn btn-secondary" onclick="scheduleVisit()">Schedule Visit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Start Your Project Today</h2>
+                    <p>Tell us about your construction project and we'll provide a detailed consultation within 24 hours.</p>
+                </div>
+                
+                <form class="contact-form" id="main-contact-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="firstName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="project-location">Project Location *</label>
+                        <input type="text" id="project-location" name="location" placeholder="City, State" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="project-type">Project Type *</label>
+                            <select id="project-type" name="projectType" required>
+                                <option value="">Select project type</option>
+                                <option value="residential-new">New Residential Construction</option>
+                                <option value="residential-renovation">Residential Renovation</option>
+                                <option value="commercial-new">New Commercial Construction</option>
+                                <option value="commercial-renovation">Commercial Renovation</option>
+                                <option value="institutional">Institutional/Government</option>
+                                <option value="industrial">Industrial/Manufacturing</option>
+                                <option value="other">Other/Custom Project</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="project-timeline">Desired Timeline</label>
+                            <select id="project-timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">ASAP (1-3 months)</option>
+                                <option value="3-6months">3-6 months</option>
+                                <option value="6-12months">6-12 months</option>
+                                <option value="over-12months">Over 12 months</option>
+                                <option value="flexible">Flexible timing</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="project-budget">Estimated Budget Range</label>
+                        <select id="project-budget" name="budget">
+                            <option value="">Select budget range (optional)</option>
+                            <option value="under-50k">Under $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k-250k">$100,000 - $250,000</option>
+                            <option value="250k-500k">$250,000 - $500,000</option>
+                            <option value="500k-1m">$500,000 - $1,000,000</option>
+                            <option value="over-1m">Over $1,000,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="project-description">Project Description *</label>
+                        <textarea id="project-description" name="description" rows="6" placeholder="Please describe your project in detail. Include size, scope, special requirements, and any specific goals or challenges." required></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="how-heard">How did you hear about us?</label>
+                        <select id="how-heard" name="referralSource">
+                            <option value="">Select source</option>
+                            <option value="google">Google Search</option>
+                            <option value="referral">Referral from friend/family</option>
+                            <option value="previous-client">Previous client</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="website">Website/Online</option>
+                            <option value="advertisement">Advertisement</option>
+                            <option value="trade-show">Trade Show/Event</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <div class="form-note">
+                            <p><strong>Your Privacy:</strong> We respect your privacy and will never share your information. See our <a href="privacy.html">Privacy Policy</a>.</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Send Message & Get 24hr Response
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Tools -->
+    <section class="quick-tools">
+        <div class="container">
+            <h2 class="section-title">Quick Tools</h2>
+            <p>Need something specific? Try our specialized tools:</p>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🤖</div>
+                    <h3>AI Project Estimator</h3>
+                    <p>Get an instant project estimate with timeline visualization in just 5 minutes.</p>
+                    <a href="estimator.html" class="btn btn-primary">Get Estimate</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🏗️</div>
+                    <h3>Project Sandbox</h3>
+                    <p>Design your project interactively with our drag-and-drop building tool.</p>
+                    <a href="sandbox.html" class="btn btn-primary">Start Designing</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <h3>3D Project Tours</h3>
+                    <p>Explore our completed projects in immersive 3D detail.</p>
+                    <a href="project-viewer.html" class="btn btn-primary">Explore Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="service-area-map">
+        <div class="container">
+            <h2 class="section-title">Our Service Area</h2>
+            <div class="map-content">
+                <div class="map-image">
+                    <img src="images/contact/service-area-map.jpg" alt="MH Construction Service Area">
+                </div>
+                <div class="service-details">
+                    <div class="service-region">
+                        <h3>Primary Service Area</h3>
+                        <p><strong>Within 1.5 hours of Pasco, WA:</strong></p>
+                        <ul>
+                            <li>Tri-Cities (Pasco, Richland, Kennewick)</li>
+                            <li>Walla Walla</li>
+                            <li>Yakima</li>
+                            <li>Hermiston, OR</li>
+                            <li>And surrounding communities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-region">
+                        <h3>Extended Service</h3>
+                        <p><strong>Special project arrangements:</strong></p>
+                        <ul>
+                            <li>Idaho (large projects only)</li>
+                            <li>Remote locations with unique requirements</li>
+                            <li>Government/institutional projects</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-note">
+                        <p><strong>Not sure if we serve your area?</strong> Contact us anyway! We may be able to make special arrangements for your project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency-contact">
+        <div class="container">
+            <div class="emergency-card">
+                <div class="emergency-icon">🚨</div>
+                <div class="emergency-content">
+                    <h3>Emergency Construction Services</h3>
+                    <p>Structural damage, storm repairs, or urgent construction needs?</p>
+                    <a href="tel:5093086489" class="btn btn-primary">Call Emergency Line: (509) 308-6489</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/mh-logo.png" alt="MH Construction" class="footer-logo">
+                    <p>Revolutionary construction technology serving Washington, Oregon & Idaho</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Information</h4>
+                    <p>Phone: (509) 308-6489</p>
+                    <p>Email: info@mhc-gc.com</p>
+                    <p>Service Area: WA, OR & ID</p>
+                    <p>Headquarters: Pasco, Washington</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">📘</a>
+                        <a href="#" class="social-icon instagram">📷</a>
+                        <a href="#" class="social-icon twitter">🐦</a>
+                        <a href="#" class="social-icon linkedin">💼</a>
+                        <a href="#" class="social-icon youtube">📺</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MH Construction. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Message Sent Successfully!</h3>
+                <button class="modal-close" id="success-close">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-content">
+                    <div class="success-icon">✓</div>
+                    <h4>Thank you for contacting MH Construction!</h4>
+                    <p>We've received your message and will respond within 24 hours. Here's what happens next:</p>
+                    <ul>
+                        <li>We'll review your project details</li>
+                        <li>A team member will contact you directly</li>
+                        <li>We'll schedule your free consultation</li>
+                        <li>You'll receive detailed project information</li>
+                    </ul>
+                    <p><strong>Response Time:</strong> Within 24 hours for projects, 3 days for events</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="window.location.href='index.html'">Return Home</button>
+                <button class="btn btn-secondary" onclick="window.location.href='estimator.html'">Try Our AI Estimator</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-toggle" id="chatbot-toggle">
+            <span class="chatbot-icon">💬</span>
+        </div>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>MH Construction Assistant</h4>
+                <button class="chatbot-close" id="chatbot-close">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Ask about construction, estimates, or projects...">
+                <button id="chatbot-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/utils.js"></script>
+    
+    <script>
+        // Contact form handling
+        document.getElementById('main-contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const contactData = Object.fromEntries(formData);
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                // Save to Firebase/local storage
+                if (window.firestore) {
+                    await window.firestore.saveLeadProgression({
+                        ...contactData,
+                        leadType: 'contact_form',
+                        leadQuality: 'high',
+                        source: 'contact_page'
+                    });
+                }
+                
+                // Show success modal
+                document.getElementById('success-modal').style.display = 'flex';
+                
+                // Reset form
+                this.reset();
+                
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('There was an error sending your message. Please try again or call us directly at (509) 308-6489.');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Schedule visit function
+        function scheduleVisit() {
+            // Open contact form with pre-filled visit request
+            document.getElementById('project-description').value = 'I would like to schedule an office visit to discuss my project in person.';
+            document.getElementById('project-description').focus();
+        }
+        
+        // Close success modal
+        document.getElementById('success-close').addEventListener('click', function() {
+            document.getElementById('success-modal').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

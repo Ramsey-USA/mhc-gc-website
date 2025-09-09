@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Project Explorer - Immersive Jobsite Tours | MH Construction</title>
+    <meta name="description" content="Take an immersive VR-style tour of our completed construction projects. Explore every detail with clickable elements and builder insights.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/project-viewer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Three.js and VR Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/mh-logo.png" alt="MH Construction" class="logo-img">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Selection -->
+    <section class="project-selection">
+        <div class="container">
+            <div class="selection-header">
+                <h1>Explore Our Projects in 3D</h1>
+                <p>Take an immersive tour of our completed projects. Click on any element to learn about materials, methods, and design decisions.</p>
+            </div>
+            
+            <div class="project-grid">
+                <div class="project-card" data-project="summers-hub">
+                    <div class="project-image">
+                        <img src="images/projects/summers-hub-exterior.jpg" alt="Summer's Hub Community Center">
+                        <div class="project-status">
+                            <span class="status-badge available">Available for Tour</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Summer's Hub Community Center</h3>
+                        <div class="project-details">
+                            <span class="detail-item">📐 12,000 sq ft</span>
+                            <span class="detail-item">📅 Completed Oct 2024</span>
+                            <span class="detail-item">🏆 Award Winner</span>
+                        </div>
+                        <p>Modern community center featuring innovative design and sustainable building practices.</p>
+                        <button class="btn btn-primary explore-btn" data-project="summers-hub">Explore in 3D</button>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="fire-station">
+                    <div class="project-image">
+                        <img src="images/projects/fire-station-exterior.jpg" alt="Zillah Fire Station #10">
+                        <div class="project-status">
+                            <span class="status-badge coming-soon">Coming Dec 2024</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Zillah Fire Station #10</h3>
+                        <div class="project-details">
+                            <span class="detail-item">📐 8,500 sq ft</span>
+                            <span class="detail-item">📅 Completion Dec 2024</span>
+                            <span class="detail-item">🚒 Emergency Services</span>
+                        </div>
+                        <p>State-of-the-art fire station designed for rapid response and community safety.</p>
+                        <button class="btn btn-secondary" disabled>Available December 2024</button>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="mock-residential">
+                    <div class="project-image">
+                        <img src="images/projects/mock-residential.jpg" alt="Mock Residential Project">
+                        <div class="project-status">
+                            <span class="status-badge demo">Demo Project</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxury Custom Home</h3>
+                        <div class="project-details">
+                            <span class="detail-item">📐 3,500 sq ft</span>
+                            <span class="detail-item">🏠 Residential</span>
+                            <span class="detail-item">💎 Premium Finishes</span>
+                        </div>
+                        <p>Demonstration of our residential capabilities with high-end finishes and smart home integration.</p>
+                        <button class="btn btn-primary explore-btn" data-project="mock-residential">Explore Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Viewer Interface -->
+    <div class="viewer-interface" id="viewer-interface" style="display: none;">
+        <!-- Viewer Header -->
+        <div class="viewer-header">
+            <div class="project-title">
+                <h2 id="current-project-title">Summer's Hub Community Center</h2>
+                <button class="btn btn-secondary" id="exit-viewer">← Back to Projects</button>
+            </div>
+            
+            <div class="viewer-controls">
+                <div class="view-modes">
+                    <button class="view-mode-btn active" data-mode="explore">🔍 Explore</button>
+                    <button class="view-mode-btn" data-mode="walkthrough">🚶 Walkthrough</button>
+                    <button class="view-mode-btn" data-mode="floorplan">📋 Floor Plan</button>
+                </div>
+                
+                <div class="viewer-actions">
+                    <button class="action-btn" id="fullscreen-btn">⛶ Fullscreen</button>
+                    <button class="action-btn" id="vr-btn">🥽 VR Mode</button>
+                    <button class="action-btn" id="share-tour">📤 Share</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3D Canvas Container -->
+        <div class="viewer-canvas" id="viewer-canvas">
+            <div id="three-viewer"></div>
+            
+            <!-- Loading Screen -->
+            <div class="loading-screen" id="loading-screen">
+                <div class="loading-content">
+                    <div class="loading-spinner"></div>
+                    <h3>Loading 3D Model...</h3>
+                    <p>Preparing your immersive experience</p>
+                    <div class="loading-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="loading-progress"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Hints -->
+            <div class="navigation-hints" id="navigation-hints">
+                <div class="hint-item">
+                    <span class="hint-icon">🖱️</span>
+                    <span class="hint-text">Click & drag to rotate</span>
+                </div>
+                <div class="hint-item">
+                    <span class="hint-icon">🔍</span>
+                    <span class="hint-text">Scroll to zoom</span>
+                </div>
+                <div class="hint-item">
+                    <span class="hint-icon">👆</span>
+                    <span class="hint-text">Click elements for details</span>
+                </div>
+            </div>
+            
+            <!-- Hotspot Indicator -->
+            <div class="hotspot-indicator" id="hotspot-indicator" style="display: none;">
+                <div class="hotspot-pulse"></div>
+                <div class="hotspot-label">Click for details</div>
+            </div>
+        </div>
+
+        <!-- Room Navigation Sidebar -->
+        <div class="room-navigation">
+            <div class="nav-header">
+                <h3>Rooms</h3>
+                <button class="nav-toggle" id="nav-toggle">◀</button>
+            </div>
+            <div class="room-list" id="room-list">
+                <!-- Rooms will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Information Panel -->
+        <div class="info-panel" id="info-panel" style="display: none;">
+            <div class="panel-header">
+                <h3 id="info-title">Element Details</h3>
+                <button class="panel-close" id="panel-close">×</button>
+            </div>
+            <div class="panel-content" id="info-content">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Builder Insights Modal -->
+        <div class="builder-insights" id="builder-insights" style="display: none;">
+            <div class="insights-content">
+                <div class="insights-header">
+                    <div class="builder-avatar">
+                        <img src="images/team/builder-avatar.jpg" alt="Master Builder">
+                    </div>
+                    <div class="builder-info">
+                        <h3>Thoughts from the Builder</h3>
+                        <p>Mike Johnson - Construction Supervisor</p>
+                    </div>
+                    <button class="insights-close" id="insights-close">×</button>
+                </div>
+                <div class="insights-body" id="insights-body">
+                    <!-- Insights content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Mini Map -->
+        <div class="mini-map" id="mini-map">
+            <div class="map-header">
+                <span>Location</span>
+                <button class="map-toggle" id="map-toggle">−</button>
+            </div>
+            <div class="map-content">
+                <canvas id="mini-map-canvas" width="200" height="150"></canvas>
+                <div class="player-position" id="player-position"></div>
+            </div>
+        </div>
+
+        <!-- Tour Progress -->
+        <div class="tour-progress" id="tour-progress">
+            <div class="progress-header">
+                <span>Tour Progress</span>
+                <span class="progress-count" id="progress-count">0/12 areas explored</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="tour-progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button class="quick-action" id="reset-camera" title="Reset Camera">
+                <span class="action-icon">🎯</span>
+            </button>
+            <button class="quick-action" id="toggle-labels" title="Toggle Labels">
+                <span class="action-icon">🏷️</span>
+            </button>
+            <button class="quick-action" id="take-screenshot" title="Take Screenshot">
+                <span class="action-icon">📸</span>
+            </button>
+            <button class="quick-action" id="auto-tour" title="Auto Tour">
+                <span class="action-icon">▶️</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Element Detail Modal -->
+    <div class="modal" id="element-modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3 id="element-title">Element Details</h3>
+                <button class="modal-close" id="element-modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="element-details">
+                    <div class="element-image">
+                        <img id="element-image" src="" alt="Element Detail">
+                        <div class="image-gallery" id="image-gallery">
+                            <!-- Additional images will be added here -->
+                        </div>
+                    </div>
+                    <div class="element-info">
+                        <div class="info-section">
+                            <h4>Material Information</h4>
+                            <div class="material-specs" id="material-specs">
+                                <!-- Material specifications -->
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <h4>Cost Information</h4>
+                            <div class="cost-breakdown" id="cost-breakdown">
+                                <!-- Cost information (materials only) -->
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <h4>Why We Chose This</h4>
+                            <div class="builder-reasoning" id="builder-reasoning">
+                                <!-- Builder's explanation -->
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <h4>Alternative Options</h4>
+                            <div class="alternatives" id="alternatives">
+                                <!-- Alternative material/method options -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="request-quote">Request Quote for Similar</button>
+                <button class="btn btn-primary" id="contact-builder">Contact Our Team</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- VR Notification -->
+    <div class="vr-notification" id="vr-notification" style="display: none;">
+        <div class="notification-content">
+            <h3>VR Mode Available</h3>
+            <p>Put on your VR headset for an immersive experience</p>
+            <div class="notification-actions">
+                <button class="btn btn-primary" id="enter-vr">Enter VR</button>
+                <button class="btn btn-secondary" id="cancel-vr">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="modal" id="contact-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Contact Our Team</h3>
+                <button class="modal-close" id="contact-modal-close">×</button>
+            </div>
+            <form class="contact-form" id="project-contact-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="contact-name">Full Name *</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="contact-email">Email *</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="contact-phone">Phone Number</label>
+                    <input type="tel" id="contact-phone">
+                </div>
+                <div class="input-group">
+                    <label for="project-interest">Project Interest</label>
+                    <select id="project-interest">
+                        <option value="">Select project type</option>
+                        <option value="similar">Similar to this project</option>
+                        <option value="residential">Residential construction</option>
+                        <option value="commercial">Commercial construction</option>
+                        <option value="renovation">Renovation project</option>
+                        <option value="consultation">General consultation</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="contact-message">Message *</label>
+                    <textarea id="contact-message" rows="4" placeholder="Tell us about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/project-viewer.js"></script>
+    <script src="js/three-setup.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>

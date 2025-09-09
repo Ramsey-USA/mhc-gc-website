@@ -1,0 +1,430 @@
+/* Flip Card Components */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform var(--transition-slow);
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, var(--mh-primary-green), var(--army-green));
+    color: var(--text-light);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, var(--mh-secondary-tan), var(--field-tan));
+    color: var(--text-light);
+    transform: rotateY(180deg);
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.flip-card-front h3,
+.flip-card-back h3 {
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.flip-card-back p {
+    margin-bottom: var(--spacing-lg);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: 2px solid var(--text-light);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-normal);
+}
+
+.card-btn:hover {
+    background-color: var(--text-light);
+    color: var(--mh-primary-green);
+    transform: translateY(-2px);
+}
+
+/* Award Card Variations */
+.award-card .flip-card-front {
+    background: linear-gradient(135deg, var(--army-gold), #e6c200);
+    color: var(--army-black);
+}
+
+.award-card .flip-card-back {
+    background: linear-gradient(135deg, var(--army-black), #1a1a1a);
+    color: var(--text-light);
+}
+
+.award-card .card-btn {
+    border-color: var(--army-gold);
+    color: var(--army-gold);
+}
+
+.award-card .card-btn:hover {
+    background-color: var(--army-gold);
+    color: var(--army-black);
+}
+
+/* Pulse Animation for Interactive Elements */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Slide In Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Stagger Animation for Grid Items */
+.stagger-animation > * {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.stagger-animation.animate > *:nth-child(1) {
+    animation: fadeIn 0.6s ease-out 0.1s forwards;
+}
+
+.stagger-animation.animate > *:nth-child(2) {
+    animation: fadeIn 0.6s ease-out 0.2s forwards;
+}
+
+.stagger-animation.animate > *:nth-child(3) {
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+}
+
+.stagger-animation.animate > *:nth-child(4) {
+    animation: fadeIn 0.6s ease-out 0.4s forwards;
+}
+
+.stagger-animation.animate > *:nth-child(5) {
+    animation: fadeIn 0.6s ease-out 0.5s forwards;
+}
+
+.stagger-animation.animate > *:nth-child(6) {
+    animation: fadeIn 0.6s ease-out 0.6s forwards;
+}
+
+/* Hover Glow Effect */
+.glow-hover {
+    transition: all var(--transition-normal);
+}
+
+.glow-hover:hover {
+    box-shadow: 0 0 20px rgba(57, 104, 81, 0.4);
+}
+
+/* Floating Animation for CTAs */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Bounce Animation for Important Elements */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.bounce-animation {
+    animation: bounce 2s infinite;
+}
+
+/* Rotation Animation for Icons */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotate 4s linear infinite;
+}
+
+/* Scale Animation for Interactive Elements */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scale-up {
+    animation: scaleUp 0.5s ease-out forwards;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 4px solid rgba(57, 104, 81, 0.1);
+    border-top: 4px solid var(--mh-primary-green);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: rotate 1s linear infinite;
+    margin: 0 auto;
+}
+
+/* Typewriter Animation */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid var(--mh-primary-green);
+    white-space: nowrap;
+    animation: typewriter 4s steps(40, end) infinite;
+}
+
+/* Parallax Effect Helper */
+.parallax-element {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Smooth Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Interactive Button Animations */
+.interactive-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.interactive-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.interactive-btn:hover::before {
+    left: 100%;
+}
+
+/* Card Tilt Effect */
+.tilt-card {
+    transition: transform var(--transition-normal);
+    transform-style: preserve-3d;
+}
+
+.tilt-card:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Progress Bar Animation */
+@keyframes progressBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--progress-width, 100%);
+    }
+}
+
+.progress-bar {
+    height: 4px;
+    background-color: var(--field-gray);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--mh-primary-green), var(--army-gold));
+    animation: progressBar 2s ease-out forwards;
+}
+
+/* Gradient Text Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(-45deg, var(--mh-primary-green), var(--army-gold), var(--mh-secondary-tan), var(--army-green));
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease infinite;
+}
+
+/* Blur to Focus Animation */
+.blur-focus {
+    filter: blur(5px);
+    transition: filter var(--transition-slow);
+}
+
+.blur-focus:hover,
+.blur-focus.focused {
+    filter: blur(0);
+}
+
+/* Magnetic Effect for Buttons */
+.magnetic-btn {
+    transition: transform var(--transition-fast);
+}
+
+.magnetic-btn:hover {
+    transform: translate(var(--mouse-x, 0), var(--mouse-y, 0)) scale(1.05);
+}
+
+/* Accordion Animation */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow) ease-out;
+}
+
+.accordion-content.open {
+    max-height: 500px;
+}
+
+/* Intersection Observer Helper Classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

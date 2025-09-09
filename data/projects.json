@@ -1,0 +1,229 @@
+[
+  {
+    "id": "summers-hub",
+    "title": "Summer's Hub Community Center",
+    "category": "Institutional",
+    "status": "completed",
+    "location": "Pasco, Washington",
+    "size": "12,000 sq ft",
+    "description": "A state-of-the-art community center featuring recreational facilities, meeting spaces, and sustainable design elements. This LEED Gold certified project showcases innovative construction technology and serves as a model for future community developments.",
+    "completionDate": "2024-10-15",
+    "virtualTour": true,
+    "images": {
+      "hero": "images/projects/summers-hub/hero.jpg",
+      "gallery": [
+        "images/projects/summers-hub/exterior-1.jpg",
+        "images/projects/summers-hub/interior-1.jpg",
+        "images/projects/summers-hub/recreation-hall.jpg",
+        "images/projects/summers-hub/meeting-rooms.jpg",
+        "images/projects/summers-hub/exterior-night.jpg"
+      ]
+    },
+    "features": [
+      "LEED Gold Certification",
+      "Smart Building Systems",
+      "Recreational Facilities",
+      "Community Meeting Spaces",
+      "Sustainable Materials",
+      "Energy Efficient Design",
+      "Universal Accessibility",
+      "Advanced HVAC Systems"
+    ],
+    "timeline": {
+      "design": "3 months",
+      "permits": "2 months",
+      "construction": "8 months",
+      "total": "13 months"
+    },
+    "awards": [
+      "2024 Regional Construction Excellence Award",
+      "LEED Gold Certification",
+      "AIA Pacific Northwest Design Award"
+    ]
+  },
+  {
+    "id": "fire-station-10",
+    "title": "Fire Station #10 Renovation",
+    "category": "Institutional",
+    "status": "in-progress",
+    "location": "Richland, Washington",
+    "size": "8,500 sq ft",
+    "description": "Complete renovation and expansion of an existing fire station to meet modern emergency services requirements. Features specialized equipment storage, training facilities, and living quarters for firefighters.",
+    "completionDate": "2024-12-20",
+    "virtualTour": false,
+    "images": {
+      "hero": "images/projects/fire-station/hero.jpg",
+      "gallery": [
+        "images/projects/fire-station/exterior-progress.jpg",
+        "images/projects/fire-station/apparatus-bay.jpg",
+        "images/projects/fire-station/living-quarters.jpg",
+        "images/projects/fire-station/training-room.jpg"
+      ]
+    },
+    "features": [
+      "Emergency Vehicle Bays",
+      "Advanced Communication Systems",
+      "Training Facilities",
+      "Modern Living Quarters",
+      "Equipment Storage",
+      "Backup Power Systems",
+      "Seismic Safety Upgrades",
+      "Energy Efficient Systems"
+    ],
+    "timeline": {
+      "design": "4 months",
+      "permits": "2 months",
+      "construction": "10 months",
+      "total": "16 months"
+    }
+  },
+  {
+    "id": "luxury-custom-home",
+    "title": "Luxury Custom Home",
+    "category": "Residential",
+    "status": "completed",
+    "location": "Walla Walla, Washington",
+    "size": "4,200 sq ft",
+    "description": "A stunning custom home featuring high-end finishes, smart home integration, and panoramic views of the surrounding wine country. This project showcases our expertise in luxury residential construction.",
+    "completionDate": "2024-07-30",
+    "virtualTour": true,
+    "images": {
+      "hero": "images/projects/luxury-home/hero.jpg",
+      "gallery": [
+        "images/projects/luxury-home/exterior-front.jpg",
+        "images/projects/luxury-home/kitchen.jpg",
+        "images/projects/luxury-home/master-suite.jpg",
+        "images/projects/luxury-home/wine-cellar.jpg",
+        "images/projects/luxury-home/outdoor-living.jpg"
+      ]
+    },
+    "features": [
+      "Smart Home Automation",
+      "Wine Cellar",
+      "Gourmet Kitchen",
+      "Master Suite with Views",
+      "Outdoor Living Space",
+      "High-End Finishes",
+      "Energy Efficient Windows",
+      "Custom Millwork"
+    ],
+    "timeline": {
+      "design": "2 months",
+      "permits": "1 month",
+      "construction": "9 months",
+      "total": "12 months"
+    }
+  },
+  {
+    "id": "tri-cities-plaza",
+    "title": "Tri-Cities Commercial Plaza",
+    "category": "Commercial",
+    "status": "completed",
+    "location": "Kennewick, Washington",
+    "size": "25,000 sq ft",
+    "description": "A modern commercial plaza featuring retail spaces, office suites, and dining establishments. The project includes sustainable design elements and ample parking for the growing Tri-Cities business community.",
+    "completionDate": "2024-05-15",
+    "virtualTour": false,
+    "images": {
+      "hero": "images/projects/commercial-plaza/hero.jpg",
+      "gallery": [
+        "images/projects/commercial-plaza/exterior-day.jpg",
+        "images/projects/commercial-plaza/retail-space.jpg",
+        "images/projects/commercial-plaza/office-interior.jpg",
+        "images/projects/commercial-plaza/parking-area.jpg"
+      ]
+    },
+    "features": [
+      "Multi-Tenant Design",
+      "Modern Retail Spaces",
+      "Professional Office Suites",
+      "Ample Parking",
+      "Sustainable Materials",
+      "Energy Efficient Lighting",
+      "Landscaped Surroundings",
+      "ADA Compliance"
+    ],
+    "timeline": {
+      "design": "3 months",
+      "permits": "2 months",
+      "construction": "11 months",
+      "total": "16 months"
+    }
+  },
+  {
+    "id": "historic-renovation",
+    "title": "Historic Building Renovation",
+    "category": "Renovation",
+    "status": "completed",
+    "location": "Pendleton, Oregon",
+    "size": "15,000 sq ft",
+    "description": "Careful restoration of a historic 1920s building, preserving its architectural character while updating systems and spaces for modern use. This project required specialized expertise in historic preservation.",
+    "completionDate": "2024-03-20",
+    "virtualTour": true,
+    "images": {
+      "hero": "images/projects/historic-renovation/hero.jpg",
+      "gallery": [
+        "images/projects/historic-renovation/facade-restored.jpg",
+        "images/projects/historic-renovation/original-details.jpg",
+        "images/projects/historic-renovation/modern-interior.jpg",
+        "images/projects/historic-renovation/mixed-use-space.jpg"
+      ]
+    },
+    "features": [
+      "Historic Preservation",
+      "Original Facade Restoration",
+      "Modern System Integration",
+      "Mixed-Use Configuration",
+      "Period Detail Preservation",
+      "Updated Safety Systems",
+      "Energy Efficiency Upgrades",
+      "ADA Accessibility"
+    ],
+    "timeline": {
+      "design": "4 months",
+      "permits": "3 months",
+      "construction": "14 months",
+      "total": "21 months"
+    },
+    "awards": [
+      "Historic Preservation Society Award",
+      "Oregon Heritage Commission Recognition"
+    ]
+  },
+  {
+    "id": "industrial-facility",
+    "title": "Food Processing Facility",
+    "category": "Industrial",
+    "status": "completed",
+    "location": "Hermiston, Oregon",
+    "size": "35,000 sq ft",
+    "description": "A specialized food processing facility designed to meet strict health and safety regulations. Features include clean rooms, specialized equipment areas, and advanced ventilation systems.",
+    "completionDate": "2024-01-10",
+    "virtualTour": false,
+    "images": {
+      "hero": "images/projects/industrial-facility/hero.jpg",
+      "gallery": [
+        "images/projects/industrial-facility/exterior-loading.jpg",
+        "images/projects/industrial-facility/processing-floor.jpg",
+        "images/projects/industrial-facility/clean-room.jpg",
+        "images/projects/industrial-facility/equipment-area.jpg"
+      ]
+    },
+    "features": [
+      "FDA Compliant Design",
+      "Clean Room Facilities",
+      "Specialized Ventilation",
+      "Equipment Integration",
+      "Temperature Control Systems",
+      "Food Safety Features",
+      "Efficient Workflow Design",
+      "Waste Management Systems"
+    ],
+    "timeline": {
+      "design": "5 months",
+      "permits": "3 months",
+      "construction": "12 months",
+      "total": "20 months"
+    }
+  }
+]

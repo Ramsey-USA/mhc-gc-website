@@ -1,0 +1,205 @@
+{
+  "costDatabase": {
+    "residential": {
+      "under-1000": {
+        "standard": { "min": 150, "max": 200 },
+        "premium": { "min": 200, "max": 300 }
+      },
+      "1000-2500": {
+        "standard": { "min": 130, "max": 180 },
+        "premium": { "min": 180, "max": 250 }
+      },
+      "2500-5000": {
+        "standard": { "min": 120, "max": 170 },
+        "premium": { "min": 170, "max": 230 }
+      },
+      "5000-10000": {
+        "standard": { "min": 110, "max": 160 },
+        "premium": { "min": 160, "max": 220 }
+      },
+      "over-10000": {
+        "standard": { "min": 100, "max": 150 },
+        "premium": { "min": 150, "max": 200 }
+      }
+    },
+    "commercial": {
+      "under-1000": {
+        "standard": { "min": 120, "max": 180 },
+        "premium": { "min": 180, "max": 250 }
+      },
+      "1000-2500": {
+        "standard": { "min": 110, "max": 160 },
+        "premium": { "min": 160, "max": 220 }
+      },
+      "2500-5000": {
+        "standard": { "min": 100, "max": 150 },
+        "premium": { "min": 150, "max": 200 }
+      },
+      "5000-10000": {
+        "standard": { "min": 90, "max": 140 },
+        "premium": { "min": 140, "max": 190 }
+      },
+      "over-10000": {
+        "standard": { "min": 80, "max": 130 },
+        "premium": { "min": 130, "max": 180 }
+      }
+    },
+    "institutional": {
+      "under-1000": {
+        "standard": { "min": 140, "max": 200 },
+        "premium": { "min": 200, "max": 280 }
+      },
+      "1000-2500": {
+        "standard": { "min": 130, "max": 180 },
+        "premium": { "min": 180, "max": 250 }
+      },
+      "2500-5000": {
+        "standard": { "min": 120, "max": 170 },
+        "premium": { "min": 170, "max": 230 }
+      },
+      "5000-10000": {
+        "standard": { "min": 110, "max": 160 },
+        "premium": { "min": 160, "max": 220 }
+      },
+      "over-10000": {
+        "standard": { "min": 100, "max": 150 },
+        "premium": { "min": 150, "max": 200 }
+      }
+    },
+    "industrial": {
+      "under-1000": {
+        "standard": { "min": 100, "max": 150 },
+        "premium": { "min": 150, "max": 200 }
+      },
+      "1000-2500": {
+        "standard": { "min": 90, "max": 130 },
+        "premium": { "min": 130, "max": 180 }
+      },
+      "2500-5000": {
+        "standard": { "min": 80, "max": 120 },
+        "premium": { "min": 120, "max": 160 }
+      },
+      "5000-10000": {
+        "standard": { "min": 70, "max": 110 },
+        "premium": { "min": 110, "max": 150 }
+      },
+      "over-10000": {
+        "standard": { "min": 60, "max": 100 },
+        "premium": { "min": 100, "max": 140 }
+      }
+    }
+  },
+  "locationFactors": {
+    "rural": 1.15,
+    "difficultAccess": 1.10,
+    "seismicZone": 1.08,
+    "floodZone": 1.12,
+    "remoteLocation": 1.20
+  },
+  "features": {
+    "smartHome": {
+      "cost": 15000,
+      "description": "Integrated smart home systems including lighting, climate, security"
+    },
+    "energyEfficient": {
+      "cost": 12000,
+      "description": "High-efficiency HVAC, insulation, and windows"
+    },
+    "customMillwork": {
+      "cost": 8000,
+      "description": "Custom built-in cabinetry and architectural details"
+    },
+    "outdoorLiving": {
+      "cost": 25000,
+      "description": "Decks, patios, outdoor kitchens, and landscaping"
+    }
+  },
+  "materials": {
+    "structural": {
+      "wall": {
+        "standard": 50,
+        "premium": 75,
+        "unit": "sq ft",
+        "description": "Standard or premium wall systems with insulation"
+      },
+      "beam": {
+        "standard": 75,
+        "premium": 100,
+        "unit": "sq ft", 
+        "description": "Structural support beams - steel or engineered lumber"
+      },
+      "column": {
+        "standard": 100,
+        "premium": 150,
+        "unit": "each",
+        "description": "Structural columns and supports"
+      }
+    },
+    "openings": {
+      "door": {
+        "standard": 500,
+        "premium": 800,
+        "unit": "each",
+        "description": "Interior and exterior doors with hardware"
+      },
+      "window": {
+        "standard": 300,
+        "premium": 500,
+        "unit": "each",
+        "description": "Double-pane windows with energy efficiency"
+      },
+      "slidingDoor": {
+        "standard": 800,
+        "premium": 1200,
+        "unit": "each",
+        "description": "Sliding patio doors with premium glass"
+      }
+    },
+    "finishes": {
+      "flooring": {
+        "standard": 15,
+        "premium": 25,
+        "unit": "sq ft",
+        "description": "Hardwood, tile, or premium flooring materials"
+      },
+      "countertop": {
+        "standard": 40,
+        "premium": 60,
+        "unit": "sq ft",
+        "description": "Granite, quartz, or premium countertop materials"
+      },
+      "cabinet": {
+        "standard": 150,
+        "premium": 200,
+        "unit": "lin ft",
+        "description": "Custom cabinetry with soft-close hardware"
+      }
+    },
+    "fixtures": {
+      "lighting": {
+        "standard": 100,
+        "premium": 150,
+        "unit": "each",
+        "description": "LED lighting fixtures and chandeliers"
+      },
+      "plumbing": {
+        "standard": 500,
+        "premium": 800,
+        "unit": "each",
+        "description": "Premium faucets and plumbing fixtures"
+      }
+    }
+  },
+  "laborMultipliers": {
+    "residential": 2.2,
+    "commercial": 2.0,
+    "institutional": 2.3,
+    "industrial": 1.8
+  },
+  "regionalFactors": {
+    "washington": 1.05,
+    "oregon": 1.02,
+    "idaho": 0.98,
+    "default": 1.0
+  }
+}

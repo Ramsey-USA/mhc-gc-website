@@ -1,0 +1,192 @@
+[
+  {
+    "id": "michael-harrison",
+    "name": "Michael Harrison",
+    "position": "Chief Executive Officer",
+    "email": "mharrison@mhc-gc.com",
+    "phone": "(509) 308-6489",
+    "bio": "Military veteran with over 20 years of construction leadership experience. Michael founded MH Construction with a vision to revolutionize the industry through technology and military-inspired excellence. He holds an MBA in Construction Management and served as a US Army Corps of Engineers officer.",
+    "credentials": [
+      "US Army Veteran",
+      "MBA Construction Management",
+      "Licensed General Contractor",
+      "OSHA 30 Certified"
+    ],
+    "specialties": [
+      "Project Leadership",
+      "Strategic Planning",
+      "Client Relations",
+      "Quality Management"
+    ],
+    "image": "images/team/michael-harrison.jpg",
+    "order": 1,
+    "featured": true,
+    "socialMedia": {
+      "linkedin": "https://linkedin.com/in/michael-harrison-construction"
+    }
+  },
+  {
+    "id": "sarah-chen",
+    "name": "Sarah Chen",
+    "position": "Chief Operating Officer",
+    "email": "schen@mhc-gc.com",
+    "phone": "(509) 308-6489",
+    "bio": "Technology leader with expertise in construction innovation and operational excellence. Sarah oversees MH Construction's digital transformation initiatives, including AI estimation tools and 3D project visualization. She holds degrees from MIT in Civil Engineering and Computer Science.",
+    "credentials": [
+      "MIT Civil Engineering",
+      "MIT Computer Science",
+      "Construction Technology Expert",
+      "LEED AP Certified"
+    ],
+    "specialties": [
+      "Construction Technology",
+      "Digital Innovation",
+      "Process Optimization",
+      "Sustainable Building"
+    ],
+    "image": "images/team/sarah-chen.jpg",
+    "order": 2,
+    "featured": true,
+    "socialMedia": {
+      "linkedin": "https://linkedin.com/in/sarah-chen-tech"
+    }
+  },
+  {
+    "id": "john-doe",
+    "name": "John Doe",
+    "position": "Senior Project Manager",
+    "email": "jdoe@mhc-gc.com",
+    "phone": "(509) 308-6489 ext. 102",
+    "bio": "Experienced project manager with 15 years in commercial and institutional construction. John specializes in complex projects requiring precise coordination and timeline management. He was instrumental in the successful delivery of the Summer's Hub Community Center.",
+    "credentials": [
+      "PMP Certified",
+      "Bachelor's Construction Management",
+      "OSHA 30 Certified",
+      "First Aid/CPR Certified"
+    ],
+    "specialties": [
+      "Commercial Construction",
+      "Institutional Projects",
+      "Project Scheduling",
+      "Team Coordination"
+    ],
+    "image": "images/team/john-doe.jpg",
+    "order": 3,
+    "featured": false
+  },
+  {
+    "id": "jane-smith",
+    "name": "Jane Smith",
+    "position": "Lead Architect",
+    "email": "jsmith@mhc-gc.com",
+    "phone": "(509) 308-6489 ext. 103",
+    "bio": "Creative architect with a passion for sustainable design and innovative building solutions. Jane leads our design team and works closely with clients to bring their visions to life while ensuring practical construction implementation.",
+    "credentials": [
+      "Licensed Architect",
+      "LEED AP BD+C",
+      "Master of Architecture",
+      "NCARB Certified"
+    ],
+    "specialties": [
+      "Sustainable Design",
+      "3D Visualization",
+      "Building Information Modeling",
+      "Client Consultation"
+    ],
+    "image": "images/team/jane-smith.jpg",
+    "order": 4,
+    "featured": false
+  },
+  {
+    "id": "mike-johnson",
+    "name": "Mike Johnson",
+    "position": "Construction Supervisor",
+    "email": "mjohnson@mhc-gc.com",
+    "phone": "(509) 308-6489 ext. 104",
+    "bio": "Hands-on construction supervisor with expertise in quality control and safety management. Mike ensures every project meets MH Construction's high standards while maintaining strict safety protocols on all job sites.",
+    "credentials": [
+      "20+ Years Field Experience",
+      "OSHA 30 Certified",
+      "Safety Management Certified",
+      "Heavy Equipment Licensed"
+    ],
+    "specialties": [
+      "Quality Control",
+      "Safety Management",
+      "Field Operations",
+      "Crew Leadership"
+    ],
+    "image": "images/team/mike-johnson.jpg",
+    "order": 5,
+    "featured": false
+  },
+  {
+    "id": "sarah-williams",
+    "name": "Sarah Williams",
+    "position": "Senior Estimator",
+    "email": "swilliams@mhc-gc.com",
+    "phone": "(509) 308-6489 ext. 105",
+    "bio": "Detail-oriented estimator who works with our AI-powered estimation tools to provide accurate project costs and timelines. Sarah's expertise ensures clients receive transparent and competitive pricing for all projects.",
+    "credentials": [
+      "Certified Professional Estimator",
+      "Bachelor's Construction Management",
+      "AACE International Member",
+      "Cost Engineering Certified"
+    ],
+    "specialties": [
+      "Cost Estimation",
+      "AI Tool Development",
+      "Value Engineering",
+      "Budget Analysis"
+    ],
+    "image": "images/team/sarah-williams.jpg",
+    "order": 6,
+    "featured": false
+  },
+  {
+    "id": "robert-davis",
+    "name": "Robert Davis",
+    "position": "Safety Manager",
+    "email": "rdavis@mhc-gc.com",
+    "phone": "(509) 308-6489 ext. 106",
+    "bio": "Dedicated safety manager committed to maintaining MH Construction's perfect safety record. Robert develops and implements comprehensive safety protocols ensuring every worker returns home safely each day.",
+    "credentials": [
+      "Certified Safety Professional",
+      "OSHA 30 Instructor",
+      "Construction Safety Specialist",
+      "Emergency Response Certified"
+    ],
+    "specialties": [
+      "Safety Protocol Development",
+      "Training Programs",
+      "Risk Assessment",
+      "Compliance Management"
+    ],
+    "image": "images/team/robert-davis.jpg",
+    "order": 7,
+    "featured": false
+  },
+  {
+    "id": "lisa-martinez",
+    "name": "Lisa Martinez",
+    "position": "Interior Design Specialist",
+    "email": "lmartinez@mhc-gc.com",
+    "phone": "(509) 308-6489 ext. 107",
+    "bio": "Creative interior design specialist who helps clients select finishes, materials, and design elements that bring their vision to life. Lisa works with our 3D visualization tools to help clients see their project before construction begins.",
+    "credentials": [
+      "Licensed Interior Designer",
+      "NCIDQ Certified",
+      "Bachelor's Interior Design",
+      "Sustainable Design Certified"
+    ],
+    "specialties": [
+      "Interior Design",
+      "Material Selection",
+      "3D Visualization",
+      "Client Consultation"
+    ],
+    "image": "images/team/lisa-martinez.jpg",
+    "order": 8,
+    "featured": false
+  }
+]

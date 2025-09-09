@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH Construction - Revolutionary Construction Technology</title>
+    <meta name="description" content="Transform your construction project with AI-powered estimation, 3D visualization, and innovative building solutions. Veteran-owned construction company serving WA, OR & ID.">
+    
+    <!-- Google Fonts - Saira -->
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Three.js for 3D Features -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-text">
+                        <span class="logo-mh">MH</span>
+                        <span class="logo-construction">Construction</span>
+                    </div>
+                </div>
+                
+                <nav class="nav" id="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="projects.html" class="nav-link">Projects</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="veteran-btn">Veteran Owned</button>
+                    <button class="mobile-menu-toggle" id="mobile-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="images/hero/summers-hub-timelapse.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Revolutionary Construction Technology</h1>
+                    <p class="hero-subtitle">AI-Powered Estimation • 3D Project Visualization • Veteran-Owned Excellence</p>
+                    <div class="hero-cta">
+                        <a href="estimator.html" class="btn btn-primary">Get AI Estimate</a>
+                        <a href="project-viewer.html" class="btn btn-secondary">Explore 3D Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Innovation Section -->
+    <section class="ai-innovation">
+        <div class="container">
+            <h2 class="section-title">Revolutionary AI-Powered Construction</h2>
+            <div class="flip-cards-grid cards-horizontal">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🏗️</div>
+                            <h3>Project Sandbox</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Design Your Project</h3>
+                            <p>Interactive drag-and-drop builder with real-time cost updates</p>
+                            <a href="sandbox.html" class="card-btn">Start Building</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🤖</div>
+                            <h3>AI Estimator</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Get Instant Estimate</h3>
+                            <p>5-step intelligent wizard with comprehensive project timeline</p>
+                            <a href="estimator.html" class="card-btn">Get Estimate</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🥽</div>
+                            <h3>3D Explorer</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Explore Our Work</h3>
+                            <p>VR-style exploration of actual completed projects</p>
+                            <a href="project-viewer.html" class="card-btn">Start Exploring</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="awards">
+        <div class="container">
+            <h2 class="section-title">Industry Recognition</h2>
+            <div class="flip-cards-grid cards-horizontal">
+                <div class="flip-card award-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/awards/award1.png" alt="Excellence Award" class="award-logo">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Excellence in Construction</h3>
+                            <p>Outstanding achievement in innovative building practices - 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card award-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/awards/award2.png" alt="Safety Award" class="award-logo">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Safety Excellence</h3>
+                            <p>Zero-incident safety record and best practices - 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card award-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/awards/award3.png" alt="Innovation Award" class="award-logo">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Technology Innovation</h3>
+                            <p>Leading the industry in construction technology - 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="awards-cta">
+                <a href="careers.html" class="btn btn-primary">Join Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid cards-horizontal">
+                <div class="value-card">
+                    <div class="value-icon">⚖️</div>
+                    <h3>Ethics</h3>
+                    <p>Unwavering commitment to doing what's right in every project and relationship</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🏆</div>
+                    <h3>Experience</h3>
+                    <p>Decades of construction expertise combined with cutting-edge innovation</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Honesty</h3>
+                    <p>Transparent communication and pricing throughout the entire construction process</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">💎</div>
+                    <h3>Integrity</h3>
+                    <p>Consistent quality and reliability that exceeds expectations every time</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">👔</div>
+                    <h3>Professionalism</h3>
+                    <p>Military-inspired discipline and attention to detail in every aspect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/project1.jpg" alt="Summer's Hub">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Summer's Hub</h3>
+                        <p>Modern community center with innovative design features</p>
+                        <a href="projects/summers-hub.html" class="project-link">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/project2.jpg" alt="Fire Station #10">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Zillah Fire Station #10</h3>
+                        <p>State-of-the-art emergency services facility</p>
+                        <a href="projects/fire-station.html" class="project-link">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/project3.jpg" alt="Custom Home">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Custom Home Build</h3>
+                        <p>Luxury residential construction with smart home integration</p>
+                        <a href="projects/custom-home.html" class="project-link">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/project4.jpg" alt="Commercial Building">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Commercial Complex</h3>
+                        <p>Multi-use commercial development with sustainable features</p>
+                        <a href="projects/commercial.html" class="project-link">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/project5.jpg" alt="Renovation Project">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Historic Renovation</h3>
+                        <p>Preserving heritage while adding modern functionality</p>
+                        <a href="projects/renovation.html" class="project-link">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/projects/project6.jpg" alt="Industrial Project">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Industrial Facility</h3>
+                        <p>Large-scale manufacturing and warehouse construction</p>
+                        <a href="projects/industrial.html" class="project-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <h2 class="section-title">Meet Our Expert Team</h2>
+            <div class="team-dropdown">
+                <button class="dropdown-toggle" id="team-toggle">
+                    <span>Our Team Members</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-content" id="team-dropdown">
+                    <a href="team/john-doe.html" class="team-member">
+                        <span class="member-name">John Doe</span>
+                        <span class="member-position">Project Manager</span>
+                    </a>
+                    <a href="team/jane-smith.html" class="team-member">
+                        <span class="member-name">Jane Smith</span>
+                        <span class="member-position">Lead Architect</span>
+                    </a>
+                    <a href="team/mike-johnson.html" class="team-member">
+                        <span class="member-name">Mike Johnson</span>
+                        <span class="member-position">Construction Supervisor</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/News Section -->
+    <section class="blog-news">
+        <div class="container">
+            <h2 class="section-title">Latest News & Insights</h2>
+            <div class="blog-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="blog-track">
+                        <div class="blog-card">
+                            <img src="images/blog/blog1.jpg" alt="Construction Innovation">
+                            <div class="blog-content">
+                                <h3>The Future of Construction Technology</h3>
+                                <p>How AI and 3D visualization are revolutionizing the building industry</p>
+                                <a href="blog/future-technology.html" class="blog-link">Read More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-card">
+                            <img src="images/blog/blog2.jpg" alt="Project Update">
+                            <div class="blog-content">
+                                <h3>Summer's Hub Project Completion</h3>
+                                <p>A look behind the scenes of our latest community center project</p>
+                                <a href="blog/summers-hub-completion.html" class="blog-link">Read More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-card">
+                            <img src="images/blog/blog3.jpg" alt="Veteran Business">
+                            <div class="blog-content">
+                                <h3>Veteran-Owned Business Excellence</h3>
+                                <p>The military values that drive our construction excellence</p>
+                                <a href="blog/veteran-excellence.html" class="blog-link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-prev" id="blog-prev">‹</button>
+                <button class="carousel-btn carousel-next" id="blog-next">›</button>
+                <div class="carousel-dots" id="blog-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo-text">
+                        <span class="footer-mh">MH</span>
+                        <span class="footer-construction">Construction</span>
+                    </div>
+                    <p>Revolutionary construction technology serving Washington, Oregon & Idaho</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Information</h4>
+                    <p>Phone: (509) 308-6489</p>
+                    <p>Service Area: WA, OR & ID</p>
+                    <p>Headquarters: Pasco, Washington</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">📘</a>
+                        <a href="#" class="social-icon instagram">📷</a>
+                        <a href="#" class="social-icon twitter">🐦</a>
+                        <a href="#" class="social-icon linkedin">💼</a>
+                        <a href="#" class="social-icon youtube">📺</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 MH Construction. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-toggle" id="chatbot-toggle">
+            <span class="chatbot-icon">💬</span>
+        </div>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>MH Construction Assistant</h4>
+                <button class="chatbot-close" id="chatbot-close">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    Hello! I'm here to help with your construction questions. How can I assist you today?
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Ask about construction, estimates, or projects...">
+                <button id="chatbot-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/homepage-animations.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>

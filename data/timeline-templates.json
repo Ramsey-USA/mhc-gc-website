@@ -1,0 +1,406 @@
+{
+  "timelineTemplates": {
+    "residential": {
+      "new-construction": {
+        "phases": [
+          {
+            "name": "Contract & Planning",
+            "duration": 14,
+            "description": "Contract signing, initial planning, and design consultation",
+            "milestones": ["Contract signed", "Initial design meeting", "Site survey"]
+          },
+          {
+            "name": "Design Development",
+            "duration": 28,
+            "description": "Architectural plans, engineering, and material selection",
+            "milestones": ["Preliminary plans", "Final architectural plans", "Material selections"]
+          },
+          {
+            "name": "Permits & Approvals",
+            "duration": 35,
+            "description": "Building permits, HOA approvals, and utility connections",
+            "milestones": ["Permit application", "Plan review", "Permit approval"]
+          },
+          {
+            "name": "Site Preparation",
+            "duration": 7,
+            "description": "Excavation, grading, and utility rough-ins",
+            "milestones": ["Site cleared", "Excavation complete", "Utilities roughed in"]
+          },
+          {
+            "name": "Foundation",
+            "duration": 10,
+            "description": "Foundation excavation, concrete pour, and curing",
+            "milestones": ["Foundation excavated", "Concrete poured", "Foundation inspection"]
+          },
+          {
+            "name": "Framing",
+            "duration": 21,
+            "description": "Structural framing, roof installation, and rough inspections",
+            "milestones": ["Wall framing", "Roof framing", "Framing inspection"]
+          },
+          {
+            "name": "Systems Installation",
+            "duration": 28,
+            "description": "Electrical, plumbing, and HVAC rough-in work",
+            "milestones": ["Electrical rough-in", "Plumbing rough-in", "HVAC installation"]
+          },
+          {
+            "name": "Insulation & Drywall",
+            "duration": 14,
+            "description": "Insulation installation and drywall finishing",
+            "milestones": ["Insulation installed", "Drywall hung", "Drywall finished"]
+          },
+          {
+            "name": "Interior Finishes",
+            "duration": 35,
+            "description": "Flooring, cabinetry, trim, and interior painting",
+            "milestones": ["Flooring installed", "Cabinets installed", "Paint complete"]
+          },
+          {
+            "name": "Final Systems",
+            "duration": 14,
+            "description": "Electrical and plumbing fixture installation",
+            "milestones": ["Light fixtures", "Plumbing fixtures", "HVAC startup"]
+          },
+          {
+            "name": "Exterior Completion",
+            "duration": 21,
+            "description": "Siding, exterior painting, and landscaping",
+            "milestones": ["Siding complete", "Exterior paint", "Landscaping"]
+          },
+          {
+            "name": "Final Inspection & Walkthrough",
+            "duration": 7,
+            "description": "Final inspections, punch list, and project completion",
+            "milestones": ["Final inspection", "Client walkthrough", "Project completion"]
+          }
+        ]
+      },
+      "major-renovation": {
+        "phases": [
+          {
+            "name": "Contract & Planning",
+            "duration": 10,
+            "description": "Contract signing and renovation planning",
+            "milestones": ["Contract signed", "Existing conditions survey", "Design meeting"]
+          },
+          {
+            "name": "Design & Engineering",
+            "duration": 21,
+            "description": "Renovation plans and structural analysis",
+            "milestones": ["Preliminary plans", "Structural analysis", "Final plans"]
+          },
+          {
+            "name": "Permits",
+            "duration": 28,
+            "description": "Renovation permits and approvals",
+            "milestones": ["Permit application", "Plan review", "Permit approval"]
+          },
+          {
+            "name": "Demolition",
+            "duration": 7,
+            "description": "Selective demolition and debris removal",
+            "milestones": ["Demo started", "Utilities capped", "Demo complete"]
+          },
+          {
+            "name": "Structural Work",
+            "duration": 14,
+            "description": "Structural modifications and reinforcement",
+            "milestones": ["Structural changes", "New framing", "Structural inspection"]
+          },
+          {
+            "name": "Systems Upgrade",
+            "duration": 21,
+            "description": "Electrical, plumbing, and HVAC updates",
+            "milestones": ["Electrical upgrade", "Plumbing updates", "HVAC modifications"]
+          },
+          {
+            "name": "Insulation & Drywall",
+            "duration": 10,
+            "description": "New insulation and drywall installation",
+            "milestones": ["Insulation added", "Drywall installation", "Drywall finishing"]
+          },
+          {
+            "name": "Finish Work",
+            "duration": 28,
+            "description": "Flooring, cabinetry, and interior finishes",
+            "milestones": ["Flooring installed", "Cabinets installed", "Trim work"]
+          },
+          {
+            "name": "Final Details",
+            "duration": 14,
+            "description": "Final fixtures, painting, and cleanup",
+            "milestones": ["Fixtures installed", "Final paint", "Cleanup complete"]
+          }
+        ]
+      }
+    },
+    "commercial": {
+      "new-construction": {
+        "phases": [
+          {
+            "name": "Contract & Pre-Construction",
+            "duration": 21,
+            "description": "Contract execution and pre-construction planning",
+            "milestones": ["Contract signed", "Project team meeting", "Construction schedule"]
+          },
+          {
+            "name": "Design Development",
+            "duration": 42,
+            "description": "Architectural and engineering design development",
+            "milestones": ["Schematic design", "Design development", "Construction documents"]
+          },
+          {
+            "name": "Permits & Approvals",
+            "duration": 56,
+            "description": "Building permits and municipal approvals",
+            "milestones": ["Permit submission", "Plan review", "Permit issuance"]
+          },
+          {
+            "name": "Site Work",
+            "duration": 21,
+            "description": "Site preparation and utility installation",
+            "milestones": ["Site cleared", "Utilities installed", "Site graded"]
+          },
+          {
+            "name": "Foundation & Structure",
+            "duration": 35,
+            "description": "Foundation and structural steel installation",
+            "milestones": ["Foundation complete", "Steel erected", "Structural inspection"]
+          },
+          {
+            "name": "Building Envelope",
+            "duration": 42,
+            "description": "Exterior walls, roofing, and weatherproofing",
+            "milestones": ["Exterior walls", "Roof installation", "Building enclosed"]
+          },
+          {
+            "name": "MEP Systems",
+            "duration": 49,
+            "description": "Mechanical, electrical, and plumbing systems",
+            "milestones": ["Rough-in complete", "Equipment installed", "Systems tested"]
+          },
+          {
+            "name": "Interior Construction",
+            "duration": 56,
+            "description": "Interior framing, drywall, and finishes",
+            "milestones": ["Interior framing", "Drywall complete", "Finishes installed"]
+          },
+          {
+            "name": "Final Systems & Testing",
+            "duration": 28,
+            "description": "System commissioning and final testing",
+            "milestones": ["Systems commissioned", "Testing complete", "Inspections passed"]
+          },
+          {
+            "name": "Occupancy Preparation",
+            "duration": 14,
+            "description": "Final inspections and occupancy preparation",
+            "milestones": ["Certificate of occupancy", "Client walkthrough", "Project handover"]
+          }
+        ]
+      }
+    },
+    "institutional": {
+      "new-construction": {
+        "phases": [
+          {
+            "name": "Contract & Planning",
+            "duration": 28,
+            "description": "Contract execution and detailed planning phase",
+            "milestones": ["Contract signed", "Stakeholder meetings", "Project charter"]
+          },
+          {
+            "name": "Design & Engineering",
+            "duration": 70,
+            "description": "Comprehensive design and engineering development",
+            "milestones": ["Conceptual design", "Design development", "Final drawings"]
+          },
+          {
+            "name": "Regulatory Approvals",
+            "duration": 84,
+            "description": "Multiple agency approvals and specialized permits",
+            "milestones": ["Permit applications", "Agency reviews", "Final approvals"]
+          },
+          {
+            "name": "Site Development",
+            "duration": 35,
+            "description": "Site preparation and infrastructure installation",
+            "milestones": ["Site preparation", "Utilities", "Access roads"]
+          },
+          {
+            "name": "Foundation & Structure",
+            "duration": 56,
+            "description": "Foundation and primary structural installation",
+            "milestones": ["Foundation", "Structural steel", "Concrete work"]
+          },
+          {
+            "name": "Building Systems",
+            "duration": 84,
+            "description": "Advanced MEP systems and specialized equipment",
+            "milestones": ["MEP rough-in", "Specialized systems", "Equipment installation"]
+          },
+          {
+            "name": "Interior Construction",
+            "duration": 70,
+            "description": "Interior build-out with specialized requirements",
+            "milestones": ["Interior framing", "Specialized rooms", "Finish work"]
+          },
+          {
+            "name": "Technology Integration",
+            "duration": 42,
+            "description": "Technology systems and specialized equipment",
+            "milestones": ["Technology infrastructure", "Equipment testing", "System integration"]
+          },
+          {
+            "name": "Testing & Commissioning",
+            "duration": 35,
+            "description": "Comprehensive testing and system commissioning",
+            "milestones": ["System testing", "Commissioning", "Performance verification"]
+          },
+          {
+            "name": "Final Inspections",
+            "duration": 21,
+            "description": "Final inspections and project completion",
+            "milestones": ["Final inspections", "Occupancy permit", "Project delivery"]
+          }
+        ]
+      }
+    },
+    "industrial": {
+      "new-construction": {
+        "phases": [
+          {
+            "name": "Contract & Engineering",
+            "duration": 35,
+            "description": "Contract execution and detailed engineering",
+            "milestones": ["Contract signed", "Engineering kickoff", "Detailed design"]
+          },
+          {
+            "name": "Design & Specifications",
+            "duration": 56,
+            "description": "Industrial design and equipment specifications",
+            "milestones": ["Process design", "Equipment specs", "Construction drawings"]
+          },
+          {
+            "name": "Permits & Environmental",
+            "duration": 70,
+            "description": "Industrial permits and environmental approvals",
+            "milestones": ["Environmental review", "Industrial permits", "Safety approvals"]
+          },
+          {
+            "name": "Site Preparation",
+            "duration": 28,
+            "description": "Site preparation and heavy utility installation",
+            "milestones": ["Site clearing", "Heavy utilities", "Foundation prep"]
+          },
+          {
+            "name": "Foundation & Steel",
+            "duration": 42,
+            "description": "Heavy foundation and structural steel erection",
+            "milestones": ["Foundation complete", "Steel erection", "Structural complete"]
+          },
+          {
+            "name": "Building Envelope",
+            "duration": 35,
+            "description": "Industrial building envelope installation",
+            "milestones": ["Wall systems", "Roofing", "Environmental sealing"]
+          },
+          {
+            "name": "Process Equipment",
+            "duration": 63,
+            "description": "Industrial equipment and process systems",
+            "milestones": ["Equipment delivery", "Installation", "Process piping"]
+          },
+          {
+            "name": "Utilities & Controls",
+            "duration": 49,
+            "description": "Industrial utilities and control systems",
+            "milestones": ["Power systems", "Control installation", "Safety systems"]
+          },
+          {
+            "name": "Testing & Startup",
+            "duration": 42,
+            "description": "System testing and production startup",
+            "milestones": ["System testing", "Process startup", "Performance testing"]
+          },
+          {
+            "name": "Commissioning",
+            "duration": 28,
+            "description": "Final commissioning and handover",
+            "milestones": ["Final testing", "Documentation", "Project handover"]
+          }
+        ]
+      }
+    }
+  },
+  "seasonalFactors": {
+    "washington": {
+      "winter": {
+        "months": ["December", "January", "February"],
+        "delays": 10,
+        "description": "Potential weather delays for exterior work"
+      },
+      "spring": {
+        "months": ["March", "April", "May"],
+        "delays": 5,
+        "description": "Optimal construction season begins"
+      },
+      "summer": {
+        "months": ["June", "July", "August"],
+        "delays": 0,
+        "description": "Peak construction season"
+      },
+      "fall": {
+        "months": ["September", "October", "November"],
+        "delays": 3,
+        "description": "Good construction weather with minor delays"
+      }
+    },
+    "oregon": {
+      "winter": {
+        "months": ["December", "January", "February"],
+        "delays": 12,
+        "description": "Rainy season impacts exterior work"
+      },
+      "spring": {
+        "months": ["March", "April", "May"],
+        "delays": 7,
+        "description": "Transition season with some rain delays"
+      },
+      "summer": {
+        "months": ["June", "July", "August"],
+        "delays": 0,
+        "description": "Ideal construction conditions"
+      },
+      "fall": {
+        "months": ["September", "October", "November"],
+        "delays": 5,
+        "description": "Good weather with increasing rain risk"
+      }
+    },
+    "idaho": {
+      "winter": {
+        "months": ["December", "January", "February"],
+        "delays": 15,
+        "description": "Cold weather and snow delays"
+      },
+      "spring": {
+        "months": ["March", "April", "May"],
+        "delays": 5,
+        "description": "Spring thaw and good construction weather"
+      },
+      "summer": {
+        "months": ["June", "July", "August"],
+        "delays": 0,
+        "description": "Optimal construction season"
+      },
+      "fall": {
+        "months": ["September", "October", "November"],
+        "delays": 3,
+        "description": "Good weather before winter"
+      }
+    }
+  }
+}
